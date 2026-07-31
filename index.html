@@ -68,7 +68,7 @@
         }
         .card-bg {
             background: rgba(17, 24, 39, 0.8);
-            backdrop-filter: blur(12px);
+            backdrop-blur: 12px;
         }
         .btn-hover:hover {
             box-shadow: 0 0 25px rgba(0, 255, 163, 0.4);
@@ -280,4 +280,70 @@
                         <span class="font-bold text-lg">Как войти в ТонПлей Казино?</span>
                         <span class="text-accent group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="mt-4 text-slate-400">Выполнить <strong>Тонплей вход</strong> можно через официальный сайт или напрямую через <strong>тонплей бот</
+                    <p class="mt-4 text-slate-400">Выполнить <strong>Тонплей вход</strong> можно через официальный сайт или напрямую через <strong>тонплей бот</strong> в Telegram. Все ваши данные и баланс синхронизированы между платформами.</p>
+                </details>
+                <details class="group bg-slate-900/50 rounded-2xl border border-slate-800 p-6">
+                    <summary class="list-none cursor-pointer flex justify-between items-center">
+                        <span class="font-bold text-lg">Нужно ли устанавливать приложение?</span>
+                        <summary class="list-none cursor-pointer flex justify-between items-center">
+                        <p class="mt-4 text-slate-400">Нет, <strong>официальный сайт Тонплей</strong> полностью адаптирован для мобильных браузеров. Также вы можете играть прямо внутри Telegram, что заменяет любое мобильное приложение.</p>
+                    </summary>
+                </details>
+                <details class="group bg-slate-900/50 rounded-2xl border border-slate-800 p-6">
+                    <summary class="list-none cursor-pointer flex justify-between items-center">
+                        <span class="font-bold text-lg">Как быстро приходят выплаты?</span>
+                        <span class="text-accent group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-400"><strong>Tonplay вывод денег</strong> происходит практически моментально. В среднем транзакция занимает от 5 до 15 минут, в зависимости от выбранного метода (TON, банковские карты или электронные кошельки).</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 pt-20 pb-10 border-t border-slate-900 text-sm">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3 mb-8">
+                <img src="logo.png" alt="Tonplay Logo" class="w-8 h-8 object-contain">
+                <div class="text-2xl font-black font-unbounded text-primary tracking-tighter">TONPLAY</div>
+            </div>
+            <div class="flex justify-center gap-8 mb-12 text-slate-500 font-bold uppercase text-[10px] tracking-[0.2em]">
+                <a href="#" class="hover:text-accent transition">О нас</a>
+                <a href="#" class="hover:text-accent transition">Правила</a>
+                <a href="#" class="hover:text-accent transition">Кэшбэк</a>
+                <a href="#" class="hover:text-accent transition">Контакты</a>
+            </div>
+            <p class="text-slate-600 max-w-xl mx-auto mb-8 leading-relaxed">
+                ТонПлей — лицензированное онлайн-казино, работающее на базе современных блокчейн-технологий. Мы обеспечиваем честность игры и безопасность ваших данных. Играйте ответственно.
+            </p>
+            <div class="pt-10 border-t border-slate-900 text-slate-700 text-[10px] uppercase font-bold tracking-widest">
+                © 2026 TONPLAY CASINO. ВСЕ ПРАВА ЗАЩИЩЕНЫ. 18+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-slate-950');
+                header.classList.remove('bg-slate-950/80');
+            } else {
+                header.classList.add('bg-slate-950/80');
+                header.classList.remove('bg-slate-950');
+            }
+        });
+    </script>
+</body>
+</html>
